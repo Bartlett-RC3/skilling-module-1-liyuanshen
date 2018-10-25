@@ -1,9 +1,9 @@
 ﻿//INTERFACE
 
 using System;
-namespace SlyWorld
-{
-    public class Cyborg:Human
+
+namespace somena
+{ /*  public class SlyWorld : Human
 
     //share the same fuctions//to avoid constract--composition!!
     {
@@ -14,4 +14,6 @@ namespace SlyWorld
         {}
        
     }
+    }
+*/
 }

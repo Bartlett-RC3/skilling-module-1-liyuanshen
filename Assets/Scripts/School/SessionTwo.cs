@@ -104,7 +104,7 @@ public class SessionTwo : MonoBehaviour {
         Debug.Log("it's too confusing!simply please!");
 
         //shorthand if//conditional operator: (a?b:c);
-        number3 = (number1 < number2) ? 100:200;
+        number2 = (number1 < number2) ? 100:200;
 
 
 

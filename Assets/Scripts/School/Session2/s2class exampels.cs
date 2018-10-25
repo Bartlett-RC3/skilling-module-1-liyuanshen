@@ -41,14 +41,14 @@ namespace SlyWorld
 
         //behavious
 
-        void walking() { };
-        void sleeping() { };
-        void eating() { };
+        //void walking() { };
+        //void sleeping() { };
+        //void eating() { };
 
         void WorkingOut()
         {
 
-        };
+        }
 
     }
 }
