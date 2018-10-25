@@ -48,7 +48,8 @@ public class liyuan_shen : MonoBehaviour
 
 
     //Dictionary(infomation+how it is organized)
-    Dictionary<string, string> movingAnimals = new Dictionary<string, string>;
+    Dictionary<string, string> movingAnimals = new Dictionary<string, string>();
+
     //tkey:how you want to orgnize;both key/value need a type def.
     //abstrcuion as number/values;
 
