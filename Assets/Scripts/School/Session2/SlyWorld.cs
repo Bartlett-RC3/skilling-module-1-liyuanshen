@@ -1,19 +1,26 @@
-﻿//INTERFACE
-
+﻿//interface
+/*
 using System;
+using sly;
 
-namespace somena
-{ /*  public class SlyWorld : Human
-
-    //share the same fuctions//to avoid constract--composition!!
+namespace sly
+{    public class SlyWorld : Human
     {
+
+
+        //share the same fuctions//to avoid constract--composition!!
         void Fly()
-        {}
+        { }
 
         void recharge()
-        {}
+        { }
+    }
+
+
+
+
+
+        
        
-    }
-    }
-*/
 }
+*/

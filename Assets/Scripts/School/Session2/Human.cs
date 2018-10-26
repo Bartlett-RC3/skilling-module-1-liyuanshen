@@ -3,7 +3,7 @@
 // Class Definition
 // Scope -- Type -- Name
 
-namespace somena
+namespace sly
 {
     public class Human
     {
