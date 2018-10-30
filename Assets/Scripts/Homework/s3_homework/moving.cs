@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class moving : MonoBehaviour {
 
-    public Transform movingCube;
+    public GameObject cube;
+    float  i= 0;
 
-    private void Awake()
-    {
-        Instantiate(movingCube);
-        movingCube = (Instantiate(movingCube));
-        movingCube.localPosition = new Vector3(Random.value, 0f, 0f);
-    }
+    // Use this for initialization
+    void Start () {
 
-
-    void update()
-    {
-
-       
-
+        cube.transform.position = new Vector3(0, 0, 0);
 
     }
+	
+	// Update is called once per frame
+	void Update () {
 
+
+        if (Time.realtimeSinceStartup>=0)
+        {
+
+            cube.transform.localPosition = new Vector3(0.1f+i/10, 0f, 0f);
+            i++;
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            cube.GetComponent<Renderer>().material.color=new Color (Random.value,Random .value ,Random.value);
+        }
+    }
 }
+
+ 
