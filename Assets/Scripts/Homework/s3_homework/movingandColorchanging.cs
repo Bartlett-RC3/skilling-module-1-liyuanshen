@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class moving : MonoBehaviour {
+public class movingandColorchanging : MonoBehaviour {
 
     public GameObject cube;
     float  i= 0;
