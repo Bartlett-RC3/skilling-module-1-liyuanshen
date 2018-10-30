@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class moving : MonoBehaviour {
 
-    public GameObject cubePrefab;
+    public Transform movingCube;
 
-    public void  Start()
+    private void Awake()
     {
-        Instantiate(cubePrefab, new Vector3(0, 0, 0), Quaternion.identity, this.transform);
+        Instantiate(movingCube);
+        movingCube = (Instantiate(movingCube));
+        movingCube.localPosition = new Vector3(Random.value, 0f, 0f);
     }
 
-    void update() {
 
-        foreach (Transform child in this.transform)
-        {
-            child.localPosition=new Vector3(Random.Range(0,10f), 0, 0);
-        }
+    void update()
+    {
 
-        foreach (Transform child in this.transform)
-        {
-            child.GetComponent<Light>().color = new Color(Random.value, Random.value, Random.value);
-        }
+       
+
+
     }
-
 
 }
