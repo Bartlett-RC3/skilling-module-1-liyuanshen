@@ -27,6 +27,9 @@ public class NewBehaviourScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+
+
+
         StartCoroutine(colorChange);
         Debug.Log(Time.time);
 
@@ -39,13 +42,11 @@ public class NewBehaviourScript : MonoBehaviour {
     }
 
     //implement the corutine
-    IEnumerator DropPrefabsFromHeight()
+    IEnumerator colorchange()
     {
         while (true)
         {
-            Vector3 prefabPos = new Vector3(UnityEngine.Random.Range(-10, 10), UnityEngine.Random.Range(-10, 10), UnityEngine.Random.Range(-10, 10));
-            Quaternion prefabRot = new Quaternion(UnityEngine.Random.Range(0, 90), UnityEngine.Random.Range(0, 90), UnityEngine.Random.Range(0, 90), 0);
-            GameObject myPrefab = Instantiate(prefabReference, prefabPos, prefabRot);
+
             yield return new WaitForSeconds(5);
         }
     }
