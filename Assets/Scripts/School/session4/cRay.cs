@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class c2 : MonoBehaviour {
+public class cRay : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -28,7 +28,7 @@ public class c2 : MonoBehaviour {
         if (Physics.Raycast(transform.position, raycastingDirection, out objectInFront))
         {
             Debug.Log("Object in front is" + objectInFront.transform.name);
-            objectInFront.transform .GetComponent<c3>().seen = true;
+            objectInFront.transform .GetComponent<colorchange>().seen = true;
        
 
 

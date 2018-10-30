@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class c3 : MonoBehaviour
+public class colorchange : MonoBehaviour
 {
     public bool seen = false;
 
