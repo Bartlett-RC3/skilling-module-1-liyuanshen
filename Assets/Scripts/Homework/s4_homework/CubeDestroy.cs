@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cub_destroy : MonoBehaviour
+public class CubeDestory : MonoBehaviour
 {
     public bool seen ;
     public GameObject cube_s4;

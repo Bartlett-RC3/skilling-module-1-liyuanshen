@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ray_casting : MonoBehaviour {
+public class RayCasting : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -27,7 +27,7 @@ public class ray_casting : MonoBehaviour {
         if (Physics.Raycast(transform.position, raycastingDirection, out objectInFront))
         {
             Debug.Log("Object in front is" + objectInFront.transform.name);
-            objectInFront.transform.GetComponent<cub_destroy>().seen = true;
+            objectInFront.transform.GetComponent<CubeDestory>().seen = true;
 
 
 
