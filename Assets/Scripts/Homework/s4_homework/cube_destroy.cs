@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class cub_destroy : MonoBehaviour
 {
-    public bool seen = true;
+    public bool seen ;
+    public GameObject cube_s4;
 
    
 
     void Update()
     {
-        if (!seen)
+        if (seen==true)
         {
-            transform.localScale = new Vector3(0.0000001f, 0.000001f, 0.000001f);
+            transform.localScale = new Vector3(0, 0, 0);
         }
 
         seen = false;
