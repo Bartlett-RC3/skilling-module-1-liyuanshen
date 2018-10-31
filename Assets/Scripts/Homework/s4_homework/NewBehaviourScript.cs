@@ -28,8 +28,6 @@ public class NewBehaviourScript : MonoBehaviour {
     void Update()
     {
 
-
-
         StartCoroutine(colorChange);
         Debug.Log(Time.time);
 
