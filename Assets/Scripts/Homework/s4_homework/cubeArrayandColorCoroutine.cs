@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class cubeArrayandColorCoroutine : MonoBehaviour {
 
-    GameObject[] cubeArray;
+    GameObject[] cubeArray = new GameObject[6];
 
     public GameObject cube1;
     public GameObject cube2;
@@ -17,36 +18,31 @@ public class cubeArrayandColorCoroutine : MonoBehaviour {
     private MeshRenderer colorrender;
 
     IEnumerator colorChange;
-
     // add cube to cubeArray
 
     void Start () {
+        cubeArray[0] = cube6;
         cubeArray[1] = cube1;
         cubeArray[2] = cube2;
         cubeArray[3] = cube3;
         cubeArray[4] = cube4;
         cubeArray[5] = cube5;
-        cubeArray[6] = cube6;
 
-        int i = 1;
-        i++;
-        colorrender = cubeArray[i].GetComponent<MeshRenderer>();
+        colorChange = colorchange();
 
+
+
+        StartCoroutine(colorChange);
     }
 
 
     void Update()
     {
 
-        StartCoroutine(colorChange);
+       
         Debug.Log(Time.time);
 
-        if (Time.time > 5)
-        {
-            StopCoroutine(colorChange);
-            StopAllCoroutines();
-
-        }
+       
     }
 
 
@@ -56,7 +52,22 @@ public class cubeArrayandColorCoroutine : MonoBehaviour {
         while (true)
         {
             yield return new WaitForSeconds(0.2f);
-            colorrender.material.color = new Color(Random.value, Random.value, Random.value);
+
+            for (int i = 0; i < 6; i++)
+            {
+                colorrender = cubeArray[i].GetComponent<MeshRenderer>();
+
+                colorrender.material.color = new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value);
+
+            }
+
+
+            if (Time.time > 5)
+            {
+                StopCoroutine(colorChange);
+                StopAllCoroutines();
+
+            }
         }
     }
 }

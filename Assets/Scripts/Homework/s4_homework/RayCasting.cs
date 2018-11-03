@@ -29,8 +29,6 @@ public class RayCasting : MonoBehaviour {
             Debug.Log("Object in front is" + objectInFront.transform.name);
             objectInFront.transform.GetComponent<CubeDestory>().seen = true;
 
-
-
         }
 
     }
